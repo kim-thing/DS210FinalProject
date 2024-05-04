@@ -119,8 +119,6 @@ mod tests {
     }
 
 
-    //problem 2 not section A or section B but Section C mut
-let mut_C = mut_b
 
     assert_eq(graph_node(node_growth.dispalce))
     assert_eq(graph_node(node.growth.data1))
