@@ -32,7 +32,6 @@ fn generate_graph_from_csv(file_path: &str, rows: usize) -> Result<Graph<(), ()>
             index
         };
 
-
         let target_index = if let Some(&index) = node_indices.get(&target) {
             index
         } else {
@@ -73,10 +72,6 @@ fn neighbors_at_distance_2_distribution(graph: &Graph<(), ()>) -> Vec<usize> {
     neighbors_at_distance_2
 }
 
-
-
-
-
 fn main() -> Result<(), Box<dyn Error>> {
     let file_path = "/Users/kw/Downloads/ChronicDiseaseIndicators.csv";
     let graph = generate_graph_from_csv(file_path, 100)?;
@@ -86,10 +81,6 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     println!("Degree Distribution:");
     println!("{:?}", degree_dist);
-
-//
-
-//
 
     println!("Neighbors at Distance 2 Distribution:");
     println!("{:?}", neighbor_dist_2);
@@ -101,8 +92,6 @@ fn main() -> Result<(), Box<dyn Error>> {
     println!("Neighbors at Distance 2 Distribution Fits Power-Law: {}", neighbor_fit);
 
     Ok(())
-
-    
 }
 
 #[cfg(test)]
@@ -117,13 +106,6 @@ mod tests {
 
         assert_eq!(graph.node_count(), num_nodes);
     }
-
-
-
-    assert_eq(graph_node(node_growth.dispalce))
-    assert_eq(graph_node(node.growth.data1))
-    let mut graph = Graph::<(), ()>::new 
-
 
     #[test]
     fn test_degree_distribution() {
@@ -140,12 +122,6 @@ mod tests {
 
         assert_eq!(dist, expected_dist);
     }
-
-
-
-
-
-
 
 
     #[test]
