@@ -10,5 +10,5 @@ I tested six degrees of separation between Diphtheria and Alameda which was 0. T
 
 “dot -Tpng graph.dot -o graph.png” in the terminal creates a visual representation of the graph
 
-On my laptop I used the path "/Users/kw/DS210FinalProject/prevDis.csv" , I have the csv file attached if it does not run right away. Additionally I did not use separate branches but there are 14 commits. 
+On my laptop I used the path "/Users/kw/DS210FinalProject/prevDis.csv" , I have the csv file attached if it does not run right away. Additionally I did not use separate branches but there are 14 commits. Results are at the bottom of the pdf
 
