@@ -1,1 +1,0 @@
-/Users/kw/DS210FinalProject/MAINworkingCode/target/debug/eTest: /Users/kw/DS210FinalProject/MAINworkingCode/src/main.rs /Users/kw/DS210FinalProject/MAINworkingCode/src/power_law.rs /Users/kw/DS210FinalProject/MAINworkingCode/src/year.rs

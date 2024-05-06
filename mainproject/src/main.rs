@@ -10,14 +10,13 @@ mod power_law;
 mod year;
 
 
-
 fn main() -> Result<(), Box<dyn Error>> {
     let file_path = "/Users/kw/Downloads/prevDis.csv";
     let (graph, city_min_connections, disease_min_connections) = build_graph_from_csv(file_path)?;
 
     let (average_distance, num_pairs, num_edges) = calculate_average_distance(&graph);
 
-    println!("Average distance between pairs of vertices: {}", average_distance);
+    println!("Average distance between pairs: {}", average_distance);
     println!("Number of pairs: {}", num_pairs);
     println!("Number of edges: {}", num_edges);
 
@@ -41,11 +40,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     } else {
         println!("The distribution does not fit a power-law");
     }
-
-
-
-
-
+    //for connection test
     let start_node = graph.node_indices().find(|&i| graph[i] == "Diphtheria").unwrap();
     let end_node = graph.node_indices().find(|&i| graph[i] == "Alameda").unwrap();
     if let Some(degree) = degrees_of_separation(&graph, start_node, end_node) {
@@ -56,8 +51,6 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     Ok(())
 }
-
-
 
 
 fn build_graph_from_csv(file_path: &str) -> Result<(DiGraph<String, u32>, HashMap<NodeIndex, usize>, HashMap<NodeIndex, usize>), Box<dyn Error>> {
@@ -147,10 +140,6 @@ fn degrees_of_separation(graph: &DiGraph<String, u32>, start: NodeIndex, end: No
 }
 
 
-
-
-
-
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -168,9 +157,6 @@ fn test_shortest_path_length() {
 
     assert_eq!(shortest_path_length(&graph, a, d).unwrap(), 2);
 }
-
-
-
     #[test]
     fn test_specific_connections() {
         let mut graph = DiGraph::<String, u32>::new();
@@ -185,9 +171,6 @@ fn test_shortest_path_length() {
 
 
     
-
-
-
 
 
 
@@ -207,8 +190,6 @@ fn test_shortest_path_length() {
         // Check degrees of separation between "Diphtheria" and "Berkeley"
         assert_eq!(degrees_of_separation(&graph, disease_diphtheria, city_berkeley), Some(2));
     }
-    
-
 
 }
 
